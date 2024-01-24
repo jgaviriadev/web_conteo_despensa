@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centrar un Div</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Establece la altura del cuerpo al 100% del viewport */
+            background-color: #f4f4f4;
+        }
+
+        .centrado {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            background-color: white;
+            max-width: 800px; 
+            width: 100%; 
+            height: 100%;
+            max-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .button {
+            display: flex;
+            height: 50px;
+            width: 300px;
+            padding: 0;
+            background: #fec60a;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            overflow: hidden;
+            font-family: "Quicksand", sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background: #ffb400;
+        }
+
+        .button:active {
+            background: #43af35;
+        }
+
+        .button__text,
+        .button__icon {
+            display: inline-flex;
+            align-items: center;
+            padding: 0 24px;
+            color: #000;
+            height: 100%;
+            justify-content: center
+        }
+        
+        .button__text {
+                flex: 1; /* Hace que este span ocupe el espacio disponible */
+                display: flex;
+                align-items: center;
+                color: #000;
+                padding: 0 24px;
+                align-items: center;
+            }
+
+        .button__icon {
+            font-size: 1.5em;
+            background: rgba(0, 0, 0, 0.08);
+
+        }
+        .contenedor {
+            display: flex;
+            justify-content: center; /* Centrar elementos horizontalmente en la fila */
+            gap: 20px;
+        }
+        .button__icon img {
+            max-width: 100%;
+             /* Ajusta el ancho máximo de la imagen */
+            max-height: 24px; /* Ajusta la altura máxima de la imagen */
+        }
+
+        @media screen and (max-width: 650px) {
+            /* Estilos específicos para pantallas con ancho máximo de 600px */
+            .contenedor {
+                flex-direction: column; /* Cambia a dirección de columna en pantallas pequeñas */
+                align-items: center; 
+                height: 150vh; /*/* Centra los elementos en la columna */
+            }
+        }
+
+        .imgLogo {
+            max-width: 100%; /* Asegura que la imagen se ajuste al ancho del contenedor */
+            width: 160px; /* Establece el ancho deseado para la imagen */
+            height: 160px; /* Mantiene la proporción original de la imagen */ /* Espacio entre el título y la imagen */
+        }
+
+        .button a {
+            color: inherit;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="centrado">
+        <img class="imgLogo" src="assets/logov2.png" alt="Descripción de la imagen">
+        <br>
+        <div class="contenedor">
+            <a href="enlace_android.html" class="button" style="text-decoration: none;">
+                <span class="button__text">Descargar para iOS</span>
+                <span class="button__icon">
+                    <img src="assets/vIos.png" alt="Icono de descarga">
+                </span>
+            </a>
+            <a href="enlace_android.html" class="button" style="text-decoration: none;">
+                <span class="button__text">Descargar para Android</span>
+                <span class="button__icon">
+                    <img src="assets/vAndroid.png" alt="Icono de descarga">
+                </span>
+            </a>
+        </div>
+        <br>
+        <p>¡Gracias por elegir Conteo Despensa para la gestión eficiente de préstamos!</p>
+        <p>Versión 1.0</p>
+    </div>
+</body>
+</html>
